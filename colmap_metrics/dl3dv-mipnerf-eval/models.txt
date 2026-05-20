@@ -1,0 +1,8 @@
+stable-virtual-camera
+ViewCrafter
+Difix3D
+depthsplat
+Long-LRM
+mvsplat360
+NVS_SOLVER
+MVGenMaster
