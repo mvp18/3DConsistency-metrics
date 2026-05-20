@@ -3,6 +3,20 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# Local release artifacts, model caches, and metric outputs
+tmp/
+output/
+data/nvs_outputs/
+colmap_metrics/results/
+*.zip
+*.tar
+*.tar.gz
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*token*.txt
+
 # C extensions
 *.so
 
