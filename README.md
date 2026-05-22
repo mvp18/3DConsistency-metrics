@@ -1,7 +1,5 @@
 # Can These Views Be One Scene? Evaluating Multiview 3D Consistency when 3D Foundation Models Hallucinate
 
-Official code for the paper.
-
 [**Paper (arXiv)**](https://arxiv.org/abs/2605.18754) &nbsp;&middot;&nbsp;
 [**Project page**](https://mvp18.github.io/3d-consistency-metrics) &nbsp;&middot;&nbsp;
 [**SysCON3D dataset**](https://huggingface.co/datasets/syscon3d-neurips26/syscon3d) &nbsp;&middot;&nbsp;
@@ -11,12 +9,7 @@ Official code for the paper.
 
 ---
 
-## Code Included
-
-This repository contains the runnable code for the paper's 3D consistency
-metrics and backbone comparison demos.
-
-Main entry points:
+## Layout
 
 - `demo_gradio_compare.py`: interactive MASt3R, DUSt3R, Fast3R, VGGT, and RobustVGGT comparison on uploaded images or SysCON3D samples.
 - `run_syscon3d_project_assets.py`: batch asset generation for SysCON3D samples.
@@ -32,9 +25,6 @@ checkpoints at runtime:
 - Fast3R: `jedyang97/Fast3R_ViT_Large_512`
 - VGGT: `facebook/VGGT-1B`
 - FeatUp: `mhamilton723/FeatUp`
-
-Third-party source code is vendored under `mast3r/`, `fast3r/`, `vggt/`,
-`met3r/`, and `RobustVGGT/`. Check the included license files before reuse.
 
 ---
 
@@ -108,15 +98,7 @@ pip install -e fast3r
 pip install -e vggt
 ```
 
-If `pytorch3d` fails to build from pip, install a PyTorch3D build that matches
-your PyTorch and CUDA versions, then rerun `pip install -r requirements-robust3d.txt`.
-
-Optional cache locations:
-
-```bash
-export HF_HOME="$PWD/tmp/huggingface"
-export TORCH_HOME="$PWD/tmp/torch"
-```
+For installing pytorch3d, run ``pip install "git+https://github.com/facebookresearch/pytorch3d.git"`` once ``CUDA_HOME`` variable is set.
 
 ## Gradio Backbone Demo
 
@@ -250,13 +232,10 @@ See `colmap_metrics/README.md` for all COLMAP wrapper options.
 ## Citation
 
 ```bibtex
-@misc{paul2026viewssceneevaluatingmultiview,
-  title  = {Can These Views Be One Scene? Evaluating Multiview 3D Consistency when 3D Foundation Models Hallucinate},
-  author = {Soumava Paul and Prakhar Kaushik and Alan Yuille},
-  year   = {2026},
-  eprint = {2605.18754},
-  archivePrefix = {arXiv},
-  primaryClass = {cs.CV},
-  url    = {https://arxiv.org/abs/2605.18754}
+@article{paul2026can,
+  title={Can These Views Be One Scene? Evaluating Multiview 3D Consistency when 3D Foundation Models Hallucinate},
+  author={Paul, Soumava and Kaushik, Prakhar and Yuille, Alan},
+  journal={arXiv preprint arXiv:2605.18754},
+  year={2026}
 }
 ```
